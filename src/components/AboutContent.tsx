@@ -68,18 +68,18 @@ export default function AboutContent() {
                 if (index === array.length - 1) {
                   const [beforeEmail, afterEmail] = part.split('email');
                   return (
-                    <>
+                    <div key={index}>
                       {beforeEmail}
                       <a href={aboutConfig.connect.links.email.url} className="text-indigo-600 underline">{aboutConfig.connect.links.email.text}</a>
                       {afterEmail}
-                    </>
+                    </div>
                   );
                 }
                 return (
-                  <>
+                  <div key={index}>
                     {part}
                     <a href={aboutConfig.connect.links.twitter.url} target="_blank" className="text-indigo-600 underline">{aboutConfig.connect.links.twitter.text}</a>
-                  </>
+                  </div>
                 );
               })}
             </p>
