@@ -1,0 +1,36 @@
+<h1>Advanced Tailwind CSS Tips and Tricks</h1>
+<p>Tailwind CSS has revolutionized how we build user interfaces. Here are some advanced tips to help you get the most out of this utility-first CSS framework.</p>
+<h2>Custom Configuration</h2>
+<pre><code class="language-javascript">// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: &quot;#1a73e8&quot;,
+        secondary: &quot;#34a853&quot;,
+      },
+    },
+  },
+};
+</code></pre>
+<h2>Best Practices</h2>
+<ol>
+<li>Use @apply for repeated patterns</li>
+<li>Leverage custom plugins</li>
+<li>Optimize for production</li>
+<li>Use arbitrary values when needed</li>
+</ol>
+<h2>Component Examples</h2>
+<pre><code class="language-html">&lt;div
+  class=&quot;flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm&quot;
+&gt;
+  &lt;h2 class=&quot;text-xl font-semibold text-gray-900 dark:text-white&quot;&gt;
+    Card Title
+  &lt;/h2&gt;
+  &lt;button
+    class=&quot;px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark&quot;
+  &gt;
+    Click Me
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>

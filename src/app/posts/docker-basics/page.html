@@ -1,0 +1,41 @@
+<h1>Docker Basics for Developers</h1>
+<p>Docker has revolutionized how we deploy and run applications. Let&#39;s learn the basics of containerization with Docker.</p>
+<h2>Core Concepts</h2>
+<ul>
+<li>Containers</li>
+<li>Images</li>
+<li>Dockerfile</li>
+<li>Docker Compose</li>
+</ul>
+<h2>Example Dockerfile</h2>
+<pre><code class="language-dockerfile"># Base image
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Build application
+RUN npm run build
+
+# Expose port
+EXPOSE 3000
+
+# Start application
+CMD [&quot;npm&quot;, &quot;start&quot;]
+</code></pre>
+<h2>Common Commands</h2>
+<ol>
+<li><code>docker build -t myapp .</code></li>
+<li><code>docker run -p 3000:3000 myapp</code></li>
+<li><code>docker-compose up</code></li>
+<li><code>docker ps</code></li>
+</ol>

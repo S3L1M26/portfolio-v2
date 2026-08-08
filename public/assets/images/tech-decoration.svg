@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .line { transition: all 0.5s ease; opacity: 0.08; }
+    .line:hover { opacity: 0.15; }
+    @media (prefers-color-scheme: dark) {
+      .line { stroke: #fff; }
+    }
+    @media (prefers-color-scheme: light) {
+      .line { stroke: #000; }
+    }
+  </style>
+
+  <!-- Main Grid -->
+  <g>
+    <!-- Horizontal Lines -->
+    <path d="M0 200h1200" class="line" stroke-width="1"/>
+    <path d="M0 400h1200" class="line" stroke-width="1"/>
+    <path d="M0 600h1200" class="line" stroke-width="1"/>
+    <path d="M0 800h1200" class="line" stroke-width="1"/>
+    <path d="M0 1000h1200" class="line" stroke-width="1"/>
+    
+    <!-- Vertical Lines -->
+    <path d="M200 0v1200" class="line" stroke-width="1"/>
+    <path d="M400 0v1200" class="line" stroke-width="1"/>
+    <path d="M600 0v1200" class="line" stroke-width="1"/>
+    <path d="M800 0v1200" class="line" stroke-width="1"/>
+    <path d="M1000 0v1200" class="line" stroke-width="1"/>
+  </g>
+
+  <!-- Diagonal Lines -->
+  <g>
+    <path d="M0 0 L1200 1200" class="line" stroke-width="1"/>
+    <path d="M1200 0 L0 1200" class="line" stroke-width="1"/>
+    <path d="M0 400 L800 1200" class="line" stroke-width="1"/>
+    <path d="M400 0 L1200 800" class="line" stroke-width="1"/>
+    <path d="M0 800 L400 1200" class="line" stroke-width="1"/>
+    <path d="M800 0 L1200 400" class="line" stroke-width="1"/>
+  </g>
+
+  <!-- Tech Circles -->
+  <g>
+    <circle cx="600" cy="600" r="300" class="line" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="600" cy="600" r="400" class="line" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="600" cy="600" r="500" class="line" stroke-width="1" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Corner Elements -->
+  <g>
+    <path d="M100 100 L200 100 L200 200 L100 200 Z" class="line" stroke-width="1"/>
+    <path d="M1000 100 L1100 100 L1100 200 L1000 200 Z" class="line" stroke-width="1"/>
+    <path d="M100 1000 L200 1000 L200 1100 L100 1100 Z" class="line" stroke-width="1"/>
+    <path d="M1000 1000 L1100 1000 L1100 1100 L1000 1100 Z" class="line" stroke-width="1"/>
+  </g>
+
+  <!-- Floating Elements -->
+  <g>
+    <path d="M300 300 L350 300 L350 350 L300 350 Z" class="line" stroke-width="1"/>
+    <path d="M850 300 L900 300 L900 350 L850 350 Z" class="line" stroke-width="1"/>
+    <path d="M300 850 L350 850 L350 900 L300 900 Z" class="line" stroke-width="1"/>
+    <path d="M850 850 L900 850 L900 900 L850 900 Z" class="line" stroke-width="1"/>
+  </g>
+</svg> 

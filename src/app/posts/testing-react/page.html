@@ -1,0 +1,35 @@
+<h1>Testing React Applications</h1>
+<p>Testing is crucial for maintaining high-quality React applications. Let&#39;s explore different testing strategies and tools.</p>
+<h2>Testing Tools</h2>
+<ul>
+<li>Jest</li>
+<li>React Testing Library</li>
+<li>Cypress</li>
+<li>MSW (Mock Service Worker)</li>
+</ul>
+<h2>Example Tests</h2>
+<pre><code class="language-jsx">import { render, screen, fireEvent } from &quot;@testing-library/react&quot;;
+import userEvent from &quot;@testing-library/user-event&quot;;
+import Counter from &quot;./Counter&quot;;
+
+describe(&quot;Counter&quot;, () =&gt; {
+  test(&quot;renders counter with initial value&quot;, () =&gt; {
+    render(&lt;Counter /&gt;);
+    expect(screen.getByText(&quot;Count: 0&quot;)).toBeInTheDocument();
+  });
+
+  test(&quot;increments counter when button is clicked&quot;, async () =&gt; {
+    render(&lt;Counter /&gt;);
+    const button = screen.getByRole(&quot;button&quot;, { name: /increment/i });
+    await userEvent.click(button);
+    expect(screen.getByText(&quot;Count: 1&quot;)).toBeInTheDocument();
+  });
+});
+</code></pre>
+<h2>Testing Strategies</h2>
+<ol>
+<li>Unit Testing</li>
+<li>Integration Testing</li>
+<li>End-to-End Testing</li>
+<li>Snapshot Testing</li>
+</ol>
