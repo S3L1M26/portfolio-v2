@@ -98,9 +98,9 @@ export default function Navbar() {
 
           <div
             id="menu"
-            className={`fixed top-[75px] ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 left-0 z-40 flex-col items-end justify-start ${
+            className={`fixed top-18.75 ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 z-40 flex-col items-end justify-start ${
               isMenuOpen ? 'flex' : 'hidden'
-            } w-full h-auto text-sm sm:text-base sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0`}
+            } w-full h-auto text-sm sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0`}
           >
             <div className="absolute inset-0 top-0 right-0 block w-full h-full px-3 sm:hidden">
               <div className="relative w-full h-full bg-white border border-dashed border-neutral-300 dark:border-neutral-700 backdrop-blur-sm rounded-xl dark:bg-neutral-950"></div>

@@ -17,7 +17,7 @@ export default function PostsContent() {
   );
 
   return (
-    <section className="relative z-20 w-[896px] mx-auto mt-32 mb-12">
+    <section className="relative z-20 w-4xl mx-auto mt-32 mb-12">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">
           {postsConfig.title}

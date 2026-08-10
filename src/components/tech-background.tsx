@@ -54,9 +54,9 @@ export default function TechBackground() {
     <>
       {/* Test overlay layer */}
       <div 
-        className="fixed left-[270px] top-1/2 -translate-y-1/2 w-[800px] h-[800px] 
+        className="fixed left-67.5 top-1/2 -translate-y-1/2 w-200 h-200 
           bg-blue-500/50 hover:bg-green-500/50 transition-colors duration-300
-          z-[9999] cursor-pointer"
+          z-9999 cursor-pointer"
         onClick={() => alert('clicked!')}
       >
         <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
@@ -68,7 +68,7 @@ export default function TechBackground() {
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div 
           ref={containerRef}
-          className="absolute left-[270px] top-1/2 -translate-y-1/2 w-[800px] h-[800px] 
+          className="absolute left-67.5 top-1/2 -translate-y-1/2 w-200 h-200 
             bg-red-500/20 cursor-pointer"
           style={{
             transition: 'transform 0.3s ease',

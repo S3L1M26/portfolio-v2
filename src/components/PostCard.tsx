@@ -35,7 +35,7 @@ export default function PostCard({ title, description, date, href, pattern = 'do
                 <span className="text-lg font-bold leading-tight tracking-tight sm:text-xl lg:text-2xl text-neutral-900 dark:text-neutral-100">
                   {title}
                 </span>
-                <svg className="group-hover:translate-x-0 flex-shrink-0 translate-y-0.5 -translate-x-1 w-4 h-4 stroke-current ml-1 transition-all ease-in-out duration-200 transform opacity-0 group-hover:opacity-100 text-neutral-600 dark:text-neutral-400" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <svg className="group-hover:translate-x-0 shrink-0 translate-y-0.5 -translate-x-1 w-4 h-4 stroke-current ml-1 transition-all ease-in-out duration-200 transform opacity-0 group-hover:opacity-100 text-neutral-600 dark:text-neutral-400" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
                     <g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" strokeWidth="2.4">
                       <g>
@@ -59,7 +59,7 @@ export default function PostCard({ title, description, date, href, pattern = 'do
                 </span>
               </div>
             </div>
-            <div className="relative w-64 h-48 rounded-xl overflow-hidden flex-shrink-0">
+            <div className="relative w-64 h-48 rounded-xl overflow-hidden shrink-0">
               <Image
                 src={imageUrl}
                 alt={title}

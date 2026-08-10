@@ -3,7 +3,7 @@ import { aboutConfig } from "@/config/about";
 
 export default function AboutContent() {
   return (
-    <section className="relative z-20 w-[896px] mx-auto mt-32 mb-12">
+    <section className="relative z-20 w-4xl mx-auto mt-32 mb-12">
       <div className="relative z-20 w-full mx-auto lg:mx-0">
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">
           {aboutConfig.title}
@@ -22,7 +22,7 @@ export default function AboutContent() {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-end">
-            <div className="relative w-[360px] h-[360px]">
+            <div className="relative w-90 h-90">
               <Image
                 src="/assets/images/about/coder.jpg"
                 alt="Profile"
@@ -60,9 +60,9 @@ export default function AboutContent() {
           </div>
         </div>
 
-        <div className="w-[360px] ml-8">
+        <div className="w-90 ml-8">
           <h2 className="mb-2 text-2xl font-bold dark:text-neutral-200">{aboutConfig.connect.title}</h2>
-          <div className="py-[30px]">
+          <div className="py-7.5">
             <p className="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
               {aboutConfig.connect.description.split('follow us on twitter').map((part, index, array) => {
                 if (index === array.length - 1) {

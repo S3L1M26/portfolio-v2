@@ -31,7 +31,7 @@ export default function ProjectsContent() {
                   alt={project.title}
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg aspect-[16/9] object-cover"
+                  className="w-full h-auto rounded-lg aspect-video object-cover"
                 />
               </span>
               <span className="block w-full px-1 mt-5 mb-1 sm:mt-3">
