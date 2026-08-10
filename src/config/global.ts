@@ -1,7 +1,7 @@
 export const globalConfig = {
   site: {
     name: "Your Portfolio Name",
-    author: "Your Name",
+    author: "Luis Arturo",
     description: "A brief description of your portfolio website",
     url: "/"
   },
