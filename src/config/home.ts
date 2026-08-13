@@ -1,6 +1,6 @@
 export const homeConfig = {
   greeting: "Hello, I'm Luis Arturo",
-  description: "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+  description: "A software developer with experience in web projects and modern applications.",
   buttons: {
     viewProjects: "View Projects",
     readPosts: "Read Posts"

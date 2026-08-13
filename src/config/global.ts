@@ -28,11 +28,11 @@ export const globalConfig = {
   },
   footer: {
     aria: "Footer Navigation",
-    copyright: "© 2025 Your Name. All rights reserved ",
+    copyright: "© 2026 Luis Arturo. All rights reserved ",
     social: {
-      twitter: "#",
-      github: "#",
-      email: "[EMAIL_ADDRESS]"
+      linkedin: "#",
+      github: "https://www.github.com/S3L1M26",
+      email: "l.narvaezluis26@gmail.com"
     }
   }
 } as const; 

@@ -1,6 +1,6 @@
 export const aboutConfig = {
   title: "About Me",
-  description: "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+  description: "Hi! I'm Luis — a software engineer focused on building modern web applications and product-driven solutions. I have worked across diverse environments and technologies, contributing to both frontend and full-stack development for real-world products.",
   image: "/assets/images/about.jpg",
   stats: [
     {
@@ -19,33 +19,39 @@ export const aboutConfig = {
   skills: [
     "Next.js",
     "React",
+    "JavaScript",
     "TypeScript",
+    "Python",
     "Tailwind CSS",
     "Node.js",
+    "Express",
+    "Laravel",
+    "MySQL",
+    "MongoDB",
     "Docker",
-    "Git",
+    "Git/GitHub",
     "AWS"
   ],
   experience: {
     title: "Experience",
     items: [
       {
-        period: "2022 - Present",
-        role: "Senior Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Leading frontend development for EdgeOne platform and templates."
+        period: "Feb 2026 – Present",
+        role: "Engine File Media Software Engineer",
+        company: "Freelance",
+        description: "Designed and developed a full-stack publishing platform using React, TypeScript, Node.js, Express and PostgreSQL. Built REST APIs, integrated PayPal and Lulu Direct APIs, and managed development using GitHub Projects and Scrum."
       },
       {
-        period: "2020 - 2022",
-        role: "Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Developed and maintained multiple web applications and tools."
+        period: "January, 2025 – April, 2025",
+        role: "Full Stack Developer, Laravel and React - Intern",
+        company: "Remote, Chile",
+        description: "Implemented and coded full stack applications with Laravel and React. Collaborated in teams and maintained technical updates on relevant technologies."
       },
       {
-        period: "2018 - 2020",
-        role: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools."
+        period: "January, 2024 – March, 2024",
+        role: "Backend Developer, .NET - Intern",
+        company: "Remote, Chile",
+        description: "Designed and implemented backend applications using C# and .NET. Optimized application performance and resolved critical technical issues."
       }
     ]
   },
