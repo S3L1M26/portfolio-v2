@@ -59,28 +59,28 @@ export const aboutConfig = {
     title: "Education",
     items: [
       {
-        period: "March 2022 - December 2023",
-        grade: "Bachelor in Engineering",
+        period: "March 2024 - December 2025",
+        grade: "Computer Science and Informatics Engineer, graduated with honors",
         school: "Andrés Bello University — Viña del Mar, Chile"
       },
       {
-        period: "March 2024 - December 2025",
-        grade: "Computer Science and Informatics Engineer, graduated with honors",
+        period: "March 2022 - December 2023",
+        grade: "Bachelor in Engineering",
         school: "Andrés Bello University — Viña del Mar, Chile"
       }
     ]
   },
   connect: {
     title: "Let's Connect",
-    description: "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an email.",
+    description: "Feel free to reach out if you want to collaborate or just say hi! We can connect on LinkedIn or you can also leave an email.",
     links: {
-      twitter: {
-        text: "follow us on twitter",
-        url: "#"
+      linkedin: {
+        text: "connect on",
+        url: "https://www.linkedin.com/in/luis-l%C3%B3pez-8ba07925a/"
       },
       email: {
         text: "email",
-        url: "mailto:[EMAIL_ADDRESS]"
+        url: "mailto:l.narvaezluis26@gmail.com"
       }
     }
   }

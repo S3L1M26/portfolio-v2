@@ -46,16 +46,19 @@ function ThemeAwareImage() {
   }
 
   return (
-    <div className="relative w-175 h-175">
-      <img
-        src={imageSrc}
-        alt="Tech background"
-        className="w-full h-full animate-[float_15s_ease-in-out_infinite] hover:scale-125 transition-transform duration-300"
-        style={{
-          animation: 'float 15s ease-in-out infinite',
-          transform: 'scale(1.2)',
-        }}
-      />
+    <div className="relative flex items-center justify-center w-175 h-175 rounded-4xl overflow-visible isolate">
+      <div className="absolute inset-0 flex items-center justify-center overflow-visible">
+        <img
+          src={imageSrc}
+          alt="Tech background"
+          className="h-full w-full object-cover animate-[float_15s_ease-in-out_infinite] hover:scale-125 transition-transform duration-300 origin-center will-change-transform"
+          style={{
+            animation: 'float 15s ease-in-out infinite',
+            transform: 'scale(1.2)',
+            display: 'block',
+          }}
+        />
+      </div>
       <style jsx>{`
         @keyframes float {
           0% { transform: scale(1.2); }
@@ -123,7 +126,9 @@ export default function HomeContent() {
         </div>
 
         <div className="w-[45%] flex items-center justify-center bg-transparent">
-          <ThemeAwareImage />
+          <div className="flex items-center justify-center w-full">
+            <ThemeAwareImage />
+          </div>
         </div>
       </div>
     </div>
