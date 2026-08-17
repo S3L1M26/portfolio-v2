@@ -29,14 +29,14 @@ export const aboutConfig = {
     "MySQL",
     "MongoDB",
     "Docker",
-    "Git/GitHub",
+    "Git & GitHub",
     "AWS"
   ],
   experience: {
     title: "Experience",
     items: [
       {
-        period: "Feb 2026 – Present",
+        period: "February 2026 – Present",
         role: "Engine File Media Software Engineer",
         company: "Freelance",
         description: "Designed and developed a full-stack publishing platform using React, TypeScript, Node.js, Express and PostgreSQL. Built REST APIs, integrated PayPal and Lulu Direct APIs, and managed development using GitHub Projects and Scrum."
@@ -52,6 +52,21 @@ export const aboutConfig = {
         role: "Backend Developer, .NET - Intern",
         company: "Remote, Chile",
         description: "Designed and implemented backend applications using C# and .NET. Optimized application performance and resolved critical technical issues."
+      }
+    ]
+  },
+  education: {
+    title: "Education",
+    items: [
+      {
+        period: "March 2022 - December 2023",
+        grade: "Bachelor in Engineering",
+        school: "Andrés Bello University — Viña del Mar, Chile"
+      },
+      {
+        period: "March 2024 - December 2025",
+        grade: "Computer Science and Informatics Engineer, graduated with honors",
+        school: "Andrés Bello University — Viña del Mar, Chile"
       }
     ]
   },
