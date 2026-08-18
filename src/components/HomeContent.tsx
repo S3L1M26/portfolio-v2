@@ -4,23 +4,24 @@ import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { homeConfig } from '@/config/home';
 
-const BACKGROUND_SVG = '/assets/images/output.svg';
+const LIGHT_BACKGROUND_SVG = '/assets/images/output.svg';
+const DARK_BACKGROUND_SVG = '/assets/images/output-dark.svg';
 
 // Move theme-related logic to this client component
 function ThemeAwareImage() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState('light');
-  const [imageSrc, setImageSrc] = useState(BACKGROUND_SVG);
+  const [imageSrc, setImageSrc] = useState(LIGHT_BACKGROUND_SVG);
 
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setTheme(savedTheme);
-      setImageSrc(BACKGROUND_SVG);
+      setImageSrc(savedTheme === 'dark' ? DARK_BACKGROUND_SVG : LIGHT_BACKGROUND_SVG);
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark');
-      setImageSrc(BACKGROUND_SVG);
+      setImageSrc(DARK_BACKGROUND_SVG);
     }
   }, []);
 
@@ -30,7 +31,7 @@ function ThemeAwareImage() {
         if (mutation.attributeName === 'class') {
           const isDark = document.documentElement.classList.contains('dark');
           setTheme(isDark ? 'dark' : 'light');
-          setImageSrc(BACKGROUND_SVG);
+          setImageSrc(isDark ? DARK_BACKGROUND_SVG : LIGHT_BACKGROUND_SVG);
         }
       });
     });
@@ -48,12 +49,12 @@ function ThemeAwareImage() {
   }
 
   return (
-    <div className="relative flex items-center justify-center w-175 h-175 rounded-4xl overflow-hidden isolate">
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+    <div className="relative -mx-8 flex h-175 w-[calc(100%+4rem)] items-center justify-center rounded-4xl overflow-visible isolate">
+      <div className="absolute inset-0 flex items-center justify-center overflow-visible">
         <img
           src={imageSrc}
           alt="Tech background"
-          className="h-full w-full max-w-full max-h-full object-contain animate-[float_15s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 origin-center will-change-transform"
+          className="h-[55%] w-auto max-w-full max-h-full object-contain animate-[float_15s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 origin-center will-change-transform"
           style={{
             animation: 'float 15s ease-in-out infinite',
             display: 'block',
