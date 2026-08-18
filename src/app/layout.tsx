@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <div className="relative min-h-screen">
+          <div className="relative">
             <div className="relative z-10 flex min-h-screen flex-col">
               {children}
             </div>
