@@ -20,7 +20,7 @@ export default function ProjectsContent() {
             key={index}
             href={project.href}
             target="_blank"
-            className="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl"
+            className="relative flex min-h-100 flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group rounded-2xl"
           >
             <span className="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
             <span className="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
@@ -54,7 +54,7 @@ export default function ProjectsContent() {
                     </g>
                   </svg>
                 </span>
-                <span className="text-sm text-neutral-600 dark:text-neutral-400 block truncate">
+                <span className="block whitespace-normal wrap-break-word text-sm text-neutral-600 dark:text-neutral-400">
                   {project.description}
                 </span>
               </span>
