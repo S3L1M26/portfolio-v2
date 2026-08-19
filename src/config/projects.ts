@@ -1,6 +1,6 @@
 export const projectsConfig = {
   title: "Featured Work & Projects",
-  description: "Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.",
+  description: "Explore my projects across web development, educational technology, robotics, and e-commerce, including platforms that connect students with mentors, support reading comprehension, and help businesses grow online.",
   backButton: "Back to Home",
   noProjects: "No projects found.",
   items: [
