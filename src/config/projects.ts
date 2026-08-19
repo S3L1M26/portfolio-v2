@@ -20,7 +20,7 @@ export const projectsConfig = {
       href: "https://facultades.unab.cl/ingenieria/carrera/ingenieria-en-computacion-e-informatica/",
       repo: "https://github.com/UNAB-ISW2/lectobot",
       imageUrl: "/assets/images/projects/banubot.png",
-      stackSvg: []
+      stackSvg: [`${iconBaseUrl}arduino.svg`, `${iconBaseUrl}fastapi.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}docker.svg`, `${iconBaseUrl}bluetooth.svg`]
     },
     {
       title: "Engine File Media",
@@ -28,7 +28,7 @@ export const projectsConfig = {
       href: "#!",
       repo: "#!",
       imageUrl: "/assets/images/projects/project3.png",
-      stackSvg: []
+      stackSvg: [`${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}express.svg`, `${iconBaseUrl}typescript.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}paypal.svg`, `${iconBaseUrl}lulu.svg`]
 
     }
   ]
