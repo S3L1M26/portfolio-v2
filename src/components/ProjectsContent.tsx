@@ -55,6 +55,16 @@ export default function ProjectsContent() {
                   <span className="block whitespace-normal wrap-break-word text-sm text-neutral-600 dark:text-neutral-400">
                     {project.description}
                   </span>
+                  <span className="flex gap-2 mt-2">
+                    {project.stackSvg.map((url: string) => (
+                      <img
+                        key={url}
+                        src={url}
+                        alt="tech icon"
+                        className="w-6 h-6" // Increased size from w-5 h-5 to w-6 h-6
+                      />
+                    ))}
+                  </span>
                 </span>
               </a>
               {project.repo && project.repo !== '#!' && (
