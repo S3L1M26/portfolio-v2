@@ -61,7 +61,7 @@ export default function ProjectsContent() {
                         key={url}
                         src={url}
                         alt="tech icon"
-                        className="w-6 h-6" // Increased size from w-5 h-5 to w-6 h-6
+                        className="w-6 h-6 brightness-0 dark:brightness-100" // Increased size from w-5 h-5 to w-6 h-6
                       />
                     ))}
                   </span>
