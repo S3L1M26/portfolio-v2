@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
 import { globalConfig } from '@/config/global';
 
 export default function Navbar() {
@@ -121,6 +122,7 @@ export default function Navbar() {
           </div>
 
           <ThemeToggle />
+          <LanguageToggle />
         </nav>
       </div>
     </header>
