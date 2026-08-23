@@ -143,7 +143,7 @@ export const aboutConfig = {
     },
     description: {
       en: "Feel free to reach out if you want to collaborate or just say hi! We can connect on LinkedIn or you can also leave an email.",
-      es: "¡No dudes en ponerte en contacto si quieres colaborar o simplemente saludar! Podemos conectar en LinkedIn o también puedes dejar un correo electrónico."
+      es: "¡No dudes en ponerte en contacto si quieres colaborar o simplemente saludar! Podemos conectar en LinkedIn o también puedes dejar un email."
     },
     links: {
       linkedin: {
