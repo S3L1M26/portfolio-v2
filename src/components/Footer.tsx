@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { globalConfig } from '@/config/global';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
+  const { language } = useLanguage();
   return (
     <section className="relative z-20 mt-auto text-gray-700 bg-white border-t dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 pointer-events-auto">
       <div className="container flex flex-col items-center justify-center min-h-10 mx-auto px-7 max-w-7xl sm:flex-row sm:min-h-12.5">
@@ -12,8 +14,8 @@ export default function Footer() {
           <span className="-translate-y-0.5">{globalConfig.site.author}</span>
         </Link>
         <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">
-          {globalConfig.footer.copyright} by <a href="https://github.com/tomcomtang" target="_blank" rel="noopener noreferrer" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-semibold">tomcomtang</a> <br />
-          Distributed by <a href="https://themewagon.com" target="_blank" rel="noopener noreferrer" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-semibold">ThemeWagon</a>
+          {globalConfig.footer.copyright[language]} <br />
+          {language === 'en' ? 'Distributed by' : 'Distribuido por'} <a href="https://themewagon.com" target="_blank" rel="noopener noreferrer" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-semibold">ThemeWagon</a>
         </p>
         <span className="inline-flex justify-center mt-2 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
           <a href={globalConfig.footer.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white pointer-events-auto">

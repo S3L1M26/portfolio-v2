@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/context/LanguageContext';
 import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
 import { globalConfig } from '@/config/global';
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { language } = useLanguage();
 
   useEffect(() => {
     setMounted(true);
@@ -116,7 +118,7 @@ export default function Navbar() {
                   isActive(item.href) ? 'text-neutral-900 dark:text-white' : ''
                 }`}
               >
-                {item.title}
+                {item.title[language]}
               </Link>
             ))}
           </div>
