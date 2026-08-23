@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { homeConfig } from '@/config/home';
+import { useLanguage }from '@/context/LanguageContext';
 
 const LIGHT_BACKGROUND_SVG = '/assets/images/output.svg';
 const DARK_BACKGROUND_SVG = '/assets/images/output-dark.svg';
@@ -74,22 +75,24 @@ function ThemeAwareImage() {
 
 // Server component version of HomeContent
 export default function HomeContent() {
+  const { language } = useLanguage();
+
   return (
     <div className="flex-1 flex items-center" style={{ transform: 'translateY(-50px)' }}>
       <div className="flex flex-row items-center justify-between w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
         <div className="w-[45%] text-left">
           <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
-            {homeConfig.greeting}
+            {homeConfig.greeting[language]}
           </h1>
           <p className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
-            {homeConfig.description}
+            {homeConfig.description[language]}
           </p>
           <div className="flex flex-row gap-4 mt-4">
             <Link
               href="/about"
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
-              View About
+              {language === 'en' ? 'View About' : 'Sobre mí'}
               <svg 
                 className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
                 fill="none" 
@@ -106,10 +109,10 @@ export default function HomeContent() {
             </Link>
 
             <Link
-              href="/posts"
+              href="/projects"
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-800 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
-              {homeConfig.buttons.readPosts}
+              {homeConfig.buttons.viewProjects[language]}
               <svg 
                 className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
                 fill="none" 

@@ -32,7 +32,7 @@ export const globalConfig = {
       {
         title: {
           en: "About",
-          es: "Acerca de"
+          es: "Sobre mí"
         },
         href: "/about"
       }
