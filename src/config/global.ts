@@ -31,6 +31,13 @@ export const globalConfig = {
       },
       {
         title: {
+          en: "Skills",
+          es: "Habilidades"
+        },
+        href: "/skills"
+      },
+      {
+        title: {
           en: "About",
           es: "Sobre mí"
         },
