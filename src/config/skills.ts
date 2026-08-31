@@ -1,3 +1,14 @@
+const iconBaseUrl = "/assets/images/projects/icon/";
+
+export interface svgData {
+    url: string;
+    color?: string;
+    themeColors?: {
+        light?: string;
+        dark?: string;
+    }
+}
+
 export const skillsContent = {
     title: {
         en: "Tech Stack & Skills",
@@ -13,7 +24,21 @@ export const skillsContent = {
             es: "Lenguajes de Programación"
         },
         items: ["JavaScript", "TypeScript", "Python", "PHP"],
-        svg: []
+        svg: [
+            {
+                url: `${iconBaseUrl}javascript.svg`,
+            },
+            {
+                url: `${iconBaseUrl}typescript.svg`,
+                color: "#007ACC"
+            },
+            {
+                url: `${iconBaseUrl}python.svg`,
+            },
+            {
+                url: `${iconBaseUrl}php.svg`,
+            }
+        ] as svgData[]
     },
     frontend: {
         label: {
@@ -21,15 +46,52 @@ export const skillsContent = {
             es: "Desarrollo Frontend"
         },
         items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"],
-        svg: []
+        svg: [
+            {
+                url: `${iconBaseUrl}react.svg`,
+                color: "#00D8FF"
+            },
+            {
+                url: `${iconBaseUrl}nextjs.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            },
+            {
+                url: `${iconBaseUrl}tailwind.svg`,
+                color: "#44a8b3"
+            },
+            {
+                url: `${iconBaseUrl}html.svg`,
+            },
+            {
+                url: `${iconBaseUrl}css.svg`,
+            }
+        ] as svgData[]
     },
     backend: {
         label: {
             en: "Backend Development",
             es: "Desarrollo Backend"
         },
-        items: ["Node.js", "Express", "Laravel", "REST APIs"],
-        svg: []
+        items: ["Node.js", "Express", "Laravel"],
+        svg: [
+            {
+                url: `${iconBaseUrl}nodejs.svg`,
+                color: "#8CC84B"
+            },
+            {
+                url: `${iconBaseUrl}express.svg`,
+                themeColors: {
+                    light: "#000000",
+                    dark: "#FFFFFF"
+                }
+            },
+            {
+                url: `${iconBaseUrl}laravel.svg`,
+                color: "#FF2D20"
+            }
+        ] as svgData[]
     },
     databases: {
         label: {
@@ -37,15 +99,50 @@ export const skillsContent = {
             es: "Bases de Datos"
         },
         items: ["MySQL", "PostgreSQL", "MongoDB"],
-        svg: []
+        svg: [
+            {
+                url: `${iconBaseUrl}mysql.svg`,
+                color: "#00758f"
+            },
+            {
+                url: `${iconBaseUrl}postgresql.svg`,
+            },
+            {
+                url: `${iconBaseUrl}mongodb-2.svg`,
+            }
+        ] as svgData[]
     },
     cloud: {
         label: {
             en: "Cloud & DevOps",
             es: "Nube y DevOps"
         },
-        items: ["Docker", "Azure", "Digital Ocean", "Railway", "Vercel", "Docker", "CI/CD"],
-        svg: []
+        items: ["Docker", "Azure", "Digital Ocean", "Railway", "Vercel", "CI/CD"],
+        svg: [
+            {
+                url: `${iconBaseUrl}docker.svg`,
+                color: "#0080FF"
+            },
+            {
+                url: `${iconBaseUrl}azure.svg`,
+            },
+            {
+                url: `${iconBaseUrl}digital-ocean.svg`,
+                color: "#2396ED"
+            },
+            {
+                url: `${iconBaseUrl}railway.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            },
+            {
+                url: `${iconBaseUrl}vercel.svg`,
+            },
+            {
+                url: `${iconBaseUrl}cicd.svg`,
+            }
+        ] as svgData[]
     },
     tools: {
         label: {
@@ -53,7 +150,50 @@ export const skillsContent = {
             es: "Herramientas"
         },
         items: ["Git", "GitHub", "Postman", "Jira", "Bitbucket", "GitLab", "Slack", "Notion", "ChatGPT", "GitHub Copilot"],
-        svg: []
+        svg: [
+            {
+                url: `${iconBaseUrl}git.svg`,
+            },
+            {
+                url: `${iconBaseUrl}github.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            },
+            {
+                url: `${iconBaseUrl}postman.svg`,
+            },
+            {
+                url: `${iconBaseUrl}jira.svg`,
+            },
+            {
+                url: `${iconBaseUrl}bitbucket.svg`,
+            },
+            {
+                url: `${iconBaseUrl}gitlab.svg`,
+            },
+            {
+                url: `${iconBaseUrl}slack.svg`,
+            },
+            {
+                url: `${iconBaseUrl}notion.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            },
+            {
+                url: `${iconBaseUrl}chat-gpt.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            },
+            {
+                url: `${iconBaseUrl}github-copilot.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
+            }
+        ] as svgData[]
     },
     courses: {
         label: {
