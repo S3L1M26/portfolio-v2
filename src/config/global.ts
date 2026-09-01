@@ -22,13 +22,13 @@ export const globalConfig = {
         },
         href: "/projects"
       },
-      {
-        title: {
-          en: "Posts",
-          es: "Publicaciones"
-        },
-        href: "/posts"
-      },
+      // {
+      //   title: {
+      //     en: "Posts",
+      //     es: "Publicaciones"
+      //   },
+      //   href: "/posts"
+      // },
       {
         title: {
           en: "Skills",
