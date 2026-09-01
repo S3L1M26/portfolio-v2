@@ -55,9 +55,9 @@ export const projectsConfig = {
         en: "A freelance project developed for a client, consisting of an editorial magazine e-commerce platform with a blog/journal expansion planned for future growth.",
         es: "Un proyecto freelance desarrollado para un cliente, que consiste en una plataforma de comercio electrónico para una revista editorial automotríz con una expansión de blog/revista planificada para el crecimiento futuro."
       },
-      href: "#!",
-      repo: "#!",
-      imageUrl: "/assets/images/projects/project3.png",
+      href: "https://github.com/Engine-File-Media/front-engine-file-media",
+      repo: "https://github.com/Engine-File-Media/front-engine-file-media",
+      imageUrl: "/assets/images/projects/efm.png",
       stackSvg: [`${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}express.svg`, `${iconBaseUrl}typescript.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}paypal.svg`, `${iconBaseUrl}lulu.svg`]
 
     }
