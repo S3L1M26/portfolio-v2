@@ -23,20 +23,38 @@ export const aboutConfig = {
     },
   ],
   skills: [
-    "Next.js",
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Tailwind CSS",
-    "Node.js",
-    "Express",
-    "Laravel",
-    "MySQL",
-    "MongoDB",
-    "Docker",
-    "Git & GitHub",
-    "AWS"
+    {
+      en: "Problem Solving",
+      es: "Resolución de Problemas"
+    },
+    {
+      en: "Effective Communication",
+      es: "Comunicación Efectiva"
+    },
+    {
+      en: "Teamwork & Collaboration",
+      es: "Trabajo en Equipo y Colaboración"
+    },
+    {
+      en: "Adaptability & Flexibility",
+      es: "Adaptabilidad y Flexibilidad"
+    },
+    {
+      en: "Critical Thinking",
+      es: "Pensamiento Crítico"
+    },
+    {
+      en: "Time Management",
+      es: "Gestión del Tiempo"
+    },
+    {
+      en: "Continuous Learning",
+      es: "Aprendizaje Continuo"
+    },
+    {
+      en: "Empathy & Emotional Intelligence",
+      es: "Empatía e Inteligencia Emocional"
+    }
   ],
   experience: {
     title: {

@@ -21,7 +21,7 @@ export default function AboutContent() {
             <div className="mt-10 lg:mt-[1cm] flex flex-wrap gap-2">
               {aboutConfig.skills.map((skill, index) => (
                 <span key={index} className="px-3 py-1 text-sm bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full">
-                  {skill}
+                  {skill[language]}
                 </span>
               ))}
             </div>

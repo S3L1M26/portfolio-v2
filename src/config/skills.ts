@@ -138,6 +138,9 @@ export const skillsContent = {
             },
             {
                 url: `${iconBaseUrl}vercel.svg`,
+                themeColors: {
+                    dark: "#FFFFFF",
+                }
             },
             {
                 url: `${iconBaseUrl}cicd.svg`,
@@ -205,41 +208,49 @@ export const skillsContent = {
                 title: "The Origins I: HTML",
                 platform: "Codédex",
                 link: "https://www.credential.net/5b284c6e-34af-4262-abd8-cacb71c59957",
+                techLabel: "HTML",
             },
             {
                 title: "The Origins II: CSS",
                 platform: "Codédex",
                 link: "https://www.codedex.io/certificates/51aa4c68-7323-4558-ab83-698c09c9a20b",
+                techLabel: "CSS",
             },
             {
                 title: "The Origins III: JavaScript",
                 platform: "Codédex",
                 link: "https://www.credential.net/0916c914-3cd5-4070-9eef-5f3348da8c03#gs.gbl995",
+                techLabel: "JavaScript",
             },
             {
                 title: "The Legend Of Python",
                 platform: "Codédex",
                 link: "https://www.credential.net/1cf17ca3-aeaa-4382-9009-c967e885262b",
+                techLabel: "Python",
             },
             {
                 title: "Framework Valley: React",
                 platform: "Codédex",
                 link: "https://www.credential.net/1ad1bf6b-71e2-497a-92fe-01c4c913a23b",
+                techLabel: "React",
             },
             {
                 title: "Learn Node.js",
                 platform: "Codecademy",
                 link: "https://www.codecademy.com/profiles/S3L1M26/certificates/240305d50b925c17868f1ac7a21a3261",
+                techLabel: "Node.js",
             },
             {
                 title: "Learn Express.js",
                 platform: "Codecademy",
                 link: "https://www.codecademy.com/profiles/S3L1M26/certificates/85396dd6e2e850ab34e904243aa464c6",
+                techLabel: "Express.js",
             },
             {
                 title: "Learn TypeScript",
                 platform: "Codecademy",
                 link: "https://www.codecademy.com/profiles/S3L1M26/certificates/56fb1e71303e37b643bb1905f31c8a09",
+                techLabel: "TypeScript",
             }
         ]
     }

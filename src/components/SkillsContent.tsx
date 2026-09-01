@@ -70,42 +70,65 @@ export default function SkillsContent() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {skillsContent.courses.items.map((course, index) => (
-                <a
+                <div
                   key={index}
-                  href={course.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col justify-between p-5 bg-white dark:bg-neutral-800/80 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 hover:border-neutral-300 dark:hover:border-neutral-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  className="relative flex flex-col justify-between p-5 duration-300 ease-out group rounded-2xl"
                 >
-                  <div>
-                    <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="inline-block px-2.5 py-1 text-xs font-semibold rounded-md bg-neutral-100 dark:bg-neutral-700/60 text-neutral-600 dark:text-neutral-300">
-                        {course.platform}
-                      </span>
-                      <svg
-                        className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </div>
-                    <h4 className="text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition-colors">
-                      {course.title}
-                    </h4>
-                  </div>
+                  {/* Capa Frontal Superior (Hover) */}
+                  <span className="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950 pointer-events-none"></span>
 
-                  <div className="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-700/40 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
-                    <span>Credential</span>
-                    <span className="font-medium group-hover:underline">View certificate &rarr;</span>
-                  </div>
-                </a>
+                  {/* Capa Trasera / Base Estática */}
+                  <span className="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
+
+                  {/* Contenido Interactivo */}
+                  <a
+                    href={course.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative z-30 flex flex-col justify-between h-full duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="inline-block px-2.5 py-1 text-xs font-semibold rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
+                          {course.platform}
+                        </span>
+                        
+                        <svg
+                          className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors duration-200"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </div>
+                      <h4 className="text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition-colors">
+                        {course.title}
+                      </h4>
+
+                      {/* Etiqueta de tecnología minimalista */}
+                      {course.techLabel && (
+                        <div className="mt-2 flex items-center gap-1.5">
+                          <span className="inline-flex items-center px-2 py-0.5 text-[11px] font-medium tracking-wide rounded-full bg-neutral-100 dark:bg-neutral-800/80 text-neutral-500 dark:text-neutral-400 border border-neutral-200/50 dark:border-neutral-700/50">
+                            {course.techLabel}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-neutral-200/60 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
+                      <span>{language === 'en' ? 'Credential' : 'Certificado'}</span>
+                      <span className="font-medium group-hover:underline">
+                        {language === 'en' ? 'View certificate' : 'Ver certificado'} &rarr;
+                      </span>
+                    </div>
+                  </a>
+                </div>
               ))}
             </div>
           </div>
