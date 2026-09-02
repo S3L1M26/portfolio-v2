@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
-const repoName = (process.env.GITHUB_REPOSITORY || '').split('/').pop() || 'portfolio-v2'
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/' + repoName : '')
+const repoName = 'portfolio-v2'
+const isProduction = process.env.NODE_ENV === 'production' || process.env.GITHUB_ACTIONS === 'true'
+const basePath = isProduction ? '/' + repoName : ''
 
 const nextConfig = {
   output: 'export',
@@ -9,7 +10,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: true
 }
 
 module.exports = nextConfig
