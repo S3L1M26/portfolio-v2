@@ -71,7 +71,7 @@ export default function AboutContent() {
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col gap-10 md:mt-20 md:flex-row md:gap-12">
+      <div className="mx-auto mt-16 flex w-full max-w-md flex-col gap-10 px-5 md:mt-20 md:max-w-none md:flex-row md:gap-12 md:px-0">
 
         {/* Experience Section */}
         <div className="flex-1">
