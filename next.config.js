@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-const repoName = 'portfolio-v2'
 const isProduction = process.env.NODE_ENV === 'production' || process.env.GITHUB_ACTIONS === 'true'
-const basePath = isProduction ? '/' + repoName : ''
+const basePath = isProduction ? '/portfolio-v2' : ''
 
 const nextConfig = {
   output: 'export',
@@ -10,7 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  trailingSlash: true
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
