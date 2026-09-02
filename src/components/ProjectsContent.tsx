@@ -23,13 +23,13 @@ export default function ProjectsContent() {
         {projectsConfig.items.map((project, index) => (
           <article
             key={index}
-            className="relative flex min-h-120 flex-col items-stretch duration-300 ease-out p-7 group rounded-2xl"
+            className="group relative flex min-h-0 flex-col items-stretch rounded-2xl p-5 duration-300 ease-out sm:min-h-120 sm:p-7"
           >
             <span className="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
             <span className="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
-            <span className="relative z-30 flex min-h-106 flex-1 w-full flex-col gap-6 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
-              <a href={project.href} target="_blank" rel="noopener noreferrer" className="flex min-h-106 flex-1 w-full flex-col gap-6">
-                <span className="relative -mx-7 -mt-7 block h-68 w-[calc(100%+3.5rem)] shrink-0 overflow-hidden rounded-t-2xl">
+            <span className="relative z-30 flex min-h-0 flex-1 w-full flex-col gap-5 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 sm:min-h-106 sm:gap-6">
+              <a href={project.href} target="_blank" rel="noopener noreferrer" className="flex min-h-0 flex-1 w-full flex-col gap-5 sm:min-h-106 sm:gap-6">
+                <span className="relative -mx-5 -mt-5 block aspect-video w-[calc(100%+2.5rem)] shrink-0 overflow-hidden rounded-t-2xl sm:-mx-7 sm:-mt-7 sm:h-68 sm:aspect-auto sm:w-[calc(100%+3.5rem)]">
                   <Image
                     src={project.imageUrl}
                     alt={project.title[language]}
