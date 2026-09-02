@@ -9,10 +9,10 @@ export default function AboutContent() {
   const { language } = useLanguage();
 
   return (
-    <section className="relative z-20 w-4xl mx-auto mt-32 mb-12">
+    <section className="relative z-20 mx-auto mt-28 mb-12 w-full max-w-5xl px-4 sm:mt-32 sm:px-6 lg:px-0">
       <div className="relative z-20 w-full mx-auto lg:mx-0">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-12">
-          <div className="w-full md:w-1/2 flex flex-col">
+        <div className="flex min-w-0 flex-col gap-10 md:flex-row md:gap-10 lg:gap-12">
+          <div className="flex min-w-0 w-full flex-col md:w-1/2">
             <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">
               {aboutConfig.title[language]}
             </h2>
@@ -28,8 +28,8 @@ export default function AboutContent() {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col items-center md:items-end md:pt-0">
-            <div className="relative w-full max-w-72 md:max-w-76 aspect-square">
+          <div className="flex min-w-0 w-full flex-col items-center md:w-1/2 md:items-end md:pt-0">
+            <div className="relative aspect-square w-full max-w-72 sm:max-w-80 md:max-w-76">
               <Image
                 src={assetPath('/assets/images/about/coder.jpg')}
                 alt="Profile"
@@ -41,7 +41,7 @@ export default function AboutContent() {
             </div>
 
             {/* Connect Section */}
-            <div className="mt-3 w-full max-w-72 md:max-w-76">
+            <div className="mt-3 w-full max-w-72 sm:max-w-80 md:max-w-76">
               <h2 className="mb-1 text-2xl font-bold dark:text-neutral-200">{aboutConfig.connect.title[language]}</h2>
               <div className="py-1">
                 <p className="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
@@ -71,24 +71,24 @@ export default function AboutContent() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row mt-20 gap-8 md:gap-12">
+      <div className="mx-auto mt-16 flex w-full max-w-md flex-col gap-10 px-5 md:mt-20 md:max-w-none md:flex-row md:gap-12 md:px-0">
 
         {/* Experience Section */}
         <div className="flex-1">
           <h2 className="mb-2 text-2xl font-bold dark:text-neutral-200">
             {aboutConfig.experience.title[language]}
           </h2>
-          <div className="py-10">
+          <div className="py-8 sm:py-10">
             {aboutConfig.experience.items.map((item, index) => (
               <div key={index} className="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
-                <div className="relative flex flex-col justify-start pl-12">
-                  <div className="absolute top-0 left-0 z-40 flex items-center justify-center -translate-x-1/2 bg-white border rounded-full dark:bg-neutral-950 w-14 h-14 border-neutral-300 dark:border-neutral-700">
-                    <svg className="w-8 h-8 text-neutral-700 dark:text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="relative flex min-w-0 flex-col justify-start pl-8 sm:pl-12">
+                  <div className="absolute top-0 left-0 z-40 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border border-neutral-300 bg-white dark:border-neutral-700 dark:bg-neutral-950 sm:h-14 sm:w-14">
+                    <svg className="h-6 w-6 text-neutral-700 dark:text-neutral-300 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                   </div>
                   <p className="text-xs uppercase text-neutral-400 dark:text-neutral-500 trackign-widest">{item.period[language]}</p>
-                  <h3 className="my-1 text-lg font-bold dark:text-neutral-100">{item.role[language]}</h3>
+                  <h3 className="my-1 wrap-break text-lg font-bold dark:text-neutral-100">{item.role[language]}</h3>
                   <p className="mb-1 text-sm font-medium dark:text-neutral-300">{item.company[language]}</p>
                   <p className="text-sm font-light text-neutral-600 dark:text-neutral-400">{item.description[language]}</p>
                 </div>
@@ -102,15 +102,15 @@ export default function AboutContent() {
           <h2 className="mb-2 text-2xl font-bold dark:text-neutral-200">
             {aboutConfig.education.title[language]}
           </h2>
-          <div className="py-10">
+          <div className="py-8 sm:py-10">
             {aboutConfig.education.items.map((item, index) => (
               <div key={index} className="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
-                <div className="relative flex flex-col justify-start pl-12">
-                  <div className="absolute top-0 left-0 z-40 flex items-center justify-center -translate-x-1/2 bg-white border rounded-full dark:bg-neutral-950 w-14 h-14 border-neutral-300 dark:border-neutral-700">
+                <div className="relative flex min-w-0 flex-col justify-start pl-8 sm:pl-12">
+                  <div className="absolute top-0 left-0 z-40 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border border-neutral-300 bg-white dark:border-neutral-700 dark:bg-neutral-950 sm:h-14 sm:w-14">
                     <img
                       src={assetPath('/assets/images/college-svgrepo-com.svg')}
                       alt="Education"
-                      className="w-7 h-7 object-contain mx-auto my-auto dark:brightness-0 dark:invert"
+                      className="mx-auto my-auto h-5 w-5 object-contain dark:brightness-0 dark:invert sm:h-7 sm:w-7"
                     />
                   </div>
                   <p className="text-xs uppercase text-neutral-400 dark:text-neutral-500 trackign-widest">{item.period[language]}</p>

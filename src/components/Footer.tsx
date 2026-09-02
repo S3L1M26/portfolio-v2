@@ -8,7 +8,7 @@ export default function Footer() {
   const { language } = useLanguage();
   return (
     <section className="relative z-20 mt-auto text-gray-700 bg-white border-t dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 pointer-events-auto">
-      <div className="container flex flex-col items-center justify-center min-h-10 mx-auto px-7 max-w-7xl sm:flex-row sm:min-h-12.5">
+      <div className="container mx-auto flex min-h-10 max-w-7xl flex-col items-center justify-center px-7 py-4 sm:min-h-12.5 sm:flex-row sm:py-3">
         <Link href="/" className="h-5 text-base group relative z-30 flex items-center space-x-1.5 text-black dark:text-white font-semibold">
           <span className="text-xl -translate-y-0.5 group-hover:-rotate-12 group-hover:scale-[1.2] ease-in-out duration-300">✦</span>
           <span className="-translate-y-0.5">{globalConfig.site.author}</span>

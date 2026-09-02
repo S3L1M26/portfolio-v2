@@ -51,12 +51,12 @@ function ThemeAwareImage() {
   }
 
   return (
-    <div className="relative -mx-8 flex h-175 w-[calc(100%+4rem)] items-center justify-center rounded-4xl overflow-visible isolate">
-      <div className="absolute inset-0 flex items-center justify-center overflow-visible">
+    <div className="relative flex h-[min(28rem,75vw)] w-full items-center justify-center overflow-hidden rounded-4xl isolate sm:h-[28rem] lg:h-175">
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <img
           src={imageSrc}
           alt="Tech background"
-          className="h-[55%] w-auto max-w-full max-h-full object-contain animate-[float_15s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 origin-center will-change-transform"
+          className="h-[62%] w-auto max-w-[92%] max-h-full object-contain animate-[float_15s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 origin-center will-change-transform sm:h-[55%]"
           style={{
             animation: 'float 15s ease-in-out infinite',
             display: 'block',
@@ -79,16 +79,16 @@ export default function HomeContent() {
   const { language } = useLanguage();
 
   return (
-    <div className="flex-1 flex items-center" style={{ transform: 'translateY(-50px)' }}>
-      <div className="flex flex-row items-center justify-between w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
-        <div className="w-[45%] text-left">
+    <div className="flex flex-1 items-center -translate-y-5 sm:-translate-y-8 lg:-translate-y-12">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-8 px-4 sm:gap-10 sm:px-6 md:flex-row lg:px-8">
+        <div className="w-full min-w-0 text-left md:w-[45%]">
           <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
             {homeConfig.greeting[language]}
           </h1>
           <p className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
             {homeConfig.description[language]}
           </p>
-          <div className="flex flex-row gap-4 mt-4">
+          <div className="mt-4 flex flex-wrap gap-3 sm:gap-4">
             <Link
               href="/about"
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -131,7 +131,7 @@ export default function HomeContent() {
           </div>
         </div>
 
-        <div className="w-[45%] flex items-center justify-center bg-transparent">
+        <div className="flex w-full items-center justify-center bg-transparent md:w-[45%]">
           <div className="flex items-center justify-center w-full">
             <ThemeAwareImage />
           </div>

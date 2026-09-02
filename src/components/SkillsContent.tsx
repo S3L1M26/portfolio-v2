@@ -38,11 +38,11 @@ export default function SkillsContent() {
                 </h3>
 
                 {/* Items Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <div className="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                   {category.items.map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="group flex items-center gap-3 px-4 py-3 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/60 hover:border-neutral-300 dark:hover:border-neutral-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                      className="group flex min-w-0 items-center gap-3 rounded-xl border border-neutral-200 bg-white px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md dark:border-neutral-700/60 dark:bg-neutral-800/80 dark:hover:border-neutral-500"
                     >
                       {/* SVG container */}
                       <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-neutral-100 dark:bg-neutral-700/50 text-neutral-800 dark:text-neutral-200 shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -52,7 +52,7 @@ export default function SkillsContent() {
                         />
                       </div>
 
-                      <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300 truncate">
+                      <span className="min-w-0 text-sm font-medium text-neutral-700 dark:text-neutral-300 wrap-break-word">
                         {tech}
                       </span>
                     </div>

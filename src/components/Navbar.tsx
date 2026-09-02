@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header id="header" className="absolute top-0 z-50 w-full h-20">
-      <div className="flex items-center justify-between h-full max-w-7xl pl-6 pr-4 mx-auto border-b border-l-0 border-r-0 border-transparent select-none lg:border-r lg:border-l lg:rounded-b-xl">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-between border-b border-l-0 border-r-0 border-transparent px-4 select-none sm:px-6 lg:rounded-b-xl lg:border-l lg:border-r">
         <Link href="/" className="h-5 text-base group relative z-30 flex items-center space-x-1.5 text-black dark:text-white font-semibold whitespace-nowrap">
           <span className="text-xl -translate-y-0.5 group-hover:-rotate-12 group-hover:scale-[1.2] ease-in-out duration-300">✦</span>
           <span className="-translate-y-0.5">{globalConfig.site.author}</span>
@@ -101,9 +101,9 @@ export default function Navbar() {
 
           <div
             id="menu"
-            className={`fixed top-18.75 ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 z-40 flex-col items-end justify-start ${
+            className={`fixed top-20 left-0 z-40 flex w-full flex-col items-end justify-start pt-7 pb-4 ease-out duration-300 sm:relative sm:top-0 sm:flex-row sm:py-0 ${
               isMenuOpen ? 'flex' : 'hidden'
-            } w-full h-auto text-sm sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0`}
+            } h-auto text-sm sm:flex sm:w-auto sm:pr-0 sm:pt-0`}
           >
             <div className="absolute inset-0 top-0 right-0 block w-full h-full px-3 sm:hidden">
               <div className="relative w-full h-full bg-white border border-dashed border-neutral-300 dark:border-neutral-700 backdrop-blur-sm rounded-xl dark:bg-neutral-950"></div>
