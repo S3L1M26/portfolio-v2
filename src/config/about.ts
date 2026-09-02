@@ -1,3 +1,5 @@
+import { assetPath } from '@/lib/assets';
+
 export const aboutConfig = {
   title: {
     en: "About Me",
@@ -7,7 +9,7 @@ export const aboutConfig = {
     en: "Hi! I'm Luis — a software engineer focused on building modern web applications and product-driven solutions. I have worked across diverse environments and technologies, contributing to both frontend and full-stack development for real-world products.",
     es: "¡Hola! Soy Luis, un ingeniero de software enfocado en construir aplicaciones web modernas y soluciones impulsadas por productos. He trabajado en diversos entornos y tecnologías, contribuyendo tanto al desarrollo frontend como full-stack para productos del mundo real."
   },
-  image: "/assets/images/about.jpg",
+  image: assetPath('/assets/images/about.jpg'),
   stats: [
     {
       value: "5+",

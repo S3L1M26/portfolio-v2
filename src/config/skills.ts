@@ -1,4 +1,6 @@
-const iconBaseUrl = "/assets/images/projects/icon/";
+import { assetPath } from '@/lib/assets';
+
+const iconBaseUrl = assetPath('/assets/images/projects/icon/');
 
 export interface svgData {
     url: string;

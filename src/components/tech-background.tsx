@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { assetPath } from '@/lib/assets';
 
 export default function TechBackground() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -75,7 +76,7 @@ export default function TechBackground() {
           }}
         >
           <img
-            src="/assets/images/output.svg"
+            src={assetPath('/assets/images/output.svg')}
             alt="Tech Background"
             className="w-full h-full opacity-50"
           />

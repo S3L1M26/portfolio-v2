@@ -1,4 +1,6 @@
-const iconBaseUrl = "/assets/images/projects/icon/";
+import { assetPath } from '@/lib/assets';
+
+const iconBaseUrl = assetPath('/assets/images/projects/icon/');
 
 export const projectsConfig = {
   title: {
@@ -29,7 +31,7 @@ export const projectsConfig = {
       },
       href: "https://s3l1m26.github.io/MentorMatch-Demo/",
       repo: "https://github.com/S3L1M26/MentorMatch-Demo",
-      imageUrl: "/assets/images/projects/mentor_match.png",
+      imageUrl: assetPath('/assets/images/projects/mentor_match.png'),
       stackSvg: [`${iconBaseUrl}laravel.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mysql.svg`, `${iconBaseUrl}docker.svg`, `${iconBaseUrl}digital-ocean.svg`, `${iconBaseUrl}zoom.svg`]
     },
     {
@@ -43,7 +45,7 @@ export const projectsConfig = {
       },
       href: "https://facultades.unab.cl/ingenieria/carrera/ingenieria-en-computacion-e-informatica/",
       repo: "https://github.com/UNAB-ISW2/lectobot",
-      imageUrl: "/assets/images/projects/banubot.png",
+      imageUrl: assetPath('/assets/images/projects/banubot.png'),
       stackSvg: [`${iconBaseUrl}arduino.svg`, `${iconBaseUrl}fastapi.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}docker.svg`, `${iconBaseUrl}bluetooth.svg`]
     },
     {
@@ -57,7 +59,7 @@ export const projectsConfig = {
       },
       href: "https://github.com/Engine-File-Media/front-engine-file-media",
       repo: "https://github.com/Engine-File-Media/front-engine-file-media",
-      imageUrl: "/assets/images/projects/efm.png",
+      imageUrl: assetPath('/assets/images/projects/efm.png'),
       stackSvg: [`${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}express.svg`, `${iconBaseUrl}typescript.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}paypal.svg`, `${iconBaseUrl}lulu.svg`]
 
     }
