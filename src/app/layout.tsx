@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from "next/font/google";
 import ThemeProvider from '@/components/ThemeProvider'
+import { LanguageProvider } from '@/context/LanguageContext'
 import { siteConfig } from '@/config/content'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,11 +21,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <div className="relative h-screen">
-            <div className="relative z-10 flex flex-col h-full">
-              {children}
+          <LanguageProvider>
+            <div className="relative">
+              <div className="relative z-10 flex min-h-screen flex-col">
+                {children}
+              </div>
             </div>
-          </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

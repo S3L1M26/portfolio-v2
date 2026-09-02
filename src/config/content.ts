@@ -158,7 +158,13 @@ export const siteConfig = {
     backButton: "Back to Home"
   },
   theme: {
-    dayMode: "Day mode",
-    nightMode: "Night mode"
+    dayMode: {
+      en: "Day mode",
+      es: "Modo diurno"
+    },
+    nightMode: {
+      en: "Night mode",
+      es: "Modo nocturno"
+    }
   }
 } as const 

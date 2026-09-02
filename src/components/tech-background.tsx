@@ -75,7 +75,7 @@ export default function TechBackground() {
           }}
         >
           <img
-            src="/assets/images/tech-background.svg"
+            src="/assets/images/output.svg"
             alt="Tech Background"
             className="w-full h-full opacity-50"
           />

@@ -1,12 +1,14 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { siteConfig } from '@/config/content'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { language } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -67,8 +69,8 @@ export default function ThemeToggle() {
         </svg>
       </div>
       <span className="hidden sm:inline-block">
-        <span className={`ml-2 ${theme === 'dark' ? 'hidden' : ''}`}>{siteConfig.theme.dayMode}</span>
-        <span className={`ml-2 ${theme === 'light' ? 'hidden' : ''}`}>{siteConfig.theme.nightMode}</span>
+        <span className={`ml-2 ${theme === 'dark' ? 'hidden' : ''}`}>{siteConfig.theme.dayMode[language]}</span>
+        <span className={`ml-2 ${theme === 'light' ? 'hidden' : ''}`}>{siteConfig.theme.nightMode[language]}</span>
       </span>
     </button>
   )

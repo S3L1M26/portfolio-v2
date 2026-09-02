@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ProjectsContent from '@/components/ProjectsContent';
+import SkillsContent from '@/components/SkillsContent';
 
 export default function Projects() {
   return (
@@ -12,7 +12,7 @@ export default function Projects() {
         </div>
 
         <Navbar />
-        <ProjectsContent />
+        <SkillsContent />
       </div>
       <Footer />
     </main>
