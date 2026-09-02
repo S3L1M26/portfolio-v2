@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProduction = process.env.NODE_ENV === 'production' || process.env.GITHUB_ACTIONS === 'true'
-const basePath = isProduction ? '/portfolio-v2' : ''
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const nextConfig = {
   output: 'export',
