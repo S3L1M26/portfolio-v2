@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { homeConfig } from '@/config/home';
 import { useLanguage }from '@/context/LanguageContext';
+import { assetPath } from '@/lib/assets';
 
-const LIGHT_BACKGROUND_SVG = '/assets/images/output.svg';
-const DARK_BACKGROUND_SVG = '/assets/images/output-dark.svg';
+const LIGHT_BACKGROUND_SVG = assetPath('/assets/images/output.svg');
+const DARK_BACKGROUND_SVG = assetPath('/assets/images/output-dark.svg');
 
 // Move theme-related logic to this client component
 function ThemeAwareImage() {

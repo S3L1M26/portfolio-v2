@@ -72,7 +72,7 @@ export default function ProjectsContent() {
                   </span>
                 </span>
               </a>
-              {project.repo && project.repo !== '#!' && (
+              {project.repo && (project.repo as string) !== '#!' && (
                 <a
                   href={project.repo}
                   target="_blank"

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { aboutConfig } from "@/config/about";
 import { useLanguage } from "@/context/LanguageContext";
+import { assetPath } from "@/lib/assets";
 
 export default function AboutContent() {
   const { language } = useLanguage();
@@ -30,7 +31,7 @@ export default function AboutContent() {
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-end md:pt-0">
             <div className="relative w-full max-w-72 md:max-w-76 aspect-square">
               <Image
-                src="/assets/images/about/coder.jpg"
+                src={assetPath('/assets/images/about/coder.jpg')}
                 alt="Profile"
                 fill
                 sizes="(max-width: 768px) 100vw, 320px"
@@ -107,7 +108,7 @@ export default function AboutContent() {
                 <div className="relative flex flex-col justify-start pl-12">
                   <div className="absolute top-0 left-0 z-40 flex items-center justify-center -translate-x-1/2 bg-white border rounded-full dark:bg-neutral-950 w-14 h-14 border-neutral-300 dark:border-neutral-700">
                     <img
-                      src="/assets/images/college-svgrepo-com.svg"
+                      src={assetPath('/assets/images/college-svgrepo-com.svg')}
                       alt="Education"
                       className="w-7 h-7 object-contain mx-auto my-auto dark:brightness-0 dark:invert"
                     />
