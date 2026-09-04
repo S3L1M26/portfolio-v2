@@ -51,7 +51,7 @@ function ThemeAwareImage() {
   }
 
   return (
-    <div className="relative flex h-[min(28rem,75vw)] w-full items-center justify-center overflow-hidden rounded-4xl isolate sm:h-[28rem] lg:h-175">
+    <div className="relative flex h-[min(28rem,75vw)] w-full items-center justify-center overflow-hidden rounded-4xl isolate sm:h-112 lg:h-175">
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <img
           src={imageSrc}
