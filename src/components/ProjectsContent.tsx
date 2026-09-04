@@ -34,6 +34,8 @@ export default function ProjectsContent() {
                     src={project.imageUrl}
                     alt={project.title[language]}
                     fill
+                    priority={index < 2}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-fill"
                   />
                 </span>
