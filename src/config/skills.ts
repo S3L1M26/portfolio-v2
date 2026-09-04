@@ -253,6 +253,12 @@ export const skillsContent = {
                 platform: "Codecademy",
                 link: "https://www.codecademy.com/profiles/S3L1M26/certificates/56fb1e71303e37b643bb1905f31c8a09",
                 techLabel: "TypeScript",
+            },
+            {
+                title: "Learn Next.js",
+                platform: "Codecademy",
+                link: "https://www.codecademy.com/profiles/S3L1M26/certificates/6567723e030e4c0089836b44fa56495c",
+                techLabel: "Next.js",
             }
         ]
     }
