@@ -2,11 +2,33 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useSyncExternalStore } from "react";
 import { projectsConfig } from '@/config/projects';
 import { useLanguage } from "@/context/LanguageContext";
 
+const DESKTOP_QUERY = '(min-width: 769px)';
+
+function subscribeToDesktopQuery(onChange: () => void) {
+  const mediaQuery = window.matchMedia(DESKTOP_QUERY);
+  mediaQuery.addEventListener('change', onChange);
+  return () => mediaQuery.removeEventListener('change', onChange);
+}
+
+function getDesktopSnapshot() {
+  return window.matchMedia(DESKTOP_QUERY).matches;
+}
+
+function getServerDesktopSnapshot() {
+  return false;
+}
+
 export default function ProjectsContent() {
   const { language } = useLanguage();
+  const isDesktop = useSyncExternalStore(
+    subscribeToDesktopQuery,
+    getDesktopSnapshot,
+    getServerDesktopSnapshot
+  );
 
   return (
     <section className="relative z-20 mx-auto mt-32 mb-12 w-full max-w-5xl px-7 lg:px-0">
@@ -34,8 +56,10 @@ export default function ProjectsContent() {
                     src={project.imageUrl}
                     alt={project.title[language]}
                     fill
-                    priority={index === 0}
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 500px"
+                    priority={isDesktop ? index < 2 : index === 0}
+                    sizes={isDesktop
+                      ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                      : "(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 500px"}
                     className="object-cover"
                   />
                 </span>
