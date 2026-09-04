@@ -34,9 +34,9 @@ export default function ProjectsContent() {
                     src={project.imageUrl}
                     alt={project.title[language]}
                     fill
-                    priority={index < 2}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-fill"
+                    priority={index === 0}
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 500px"
+                    className="object-cover"
                   />
                 </span>
                 <span className="block min-w-0 w-full px-1 py-2">

@@ -1,3 +1,6 @@
+import banubotImg from '../../public/assets/images/projects/banubot.webp';
+import efmImg from '../../public/assets/images/projects/efm.webp';
+import mentorMatchImg from '../../public/assets/images/projects/mentor_match.webp';
 import { assetPath } from '@/lib/assets';
 
 const iconBaseUrl = assetPath('/assets/images/projects/icon/');
@@ -31,7 +34,7 @@ export const projectsConfig = {
       },
       href: "https://s3l1m26.github.io/MentorMatch-Demo/",
       repo: "https://github.com/S3L1M26/MentorMatch-Demo",
-      imageUrl: assetPath('/assets/images/projects/mentor_match.png'),
+      imageUrl: mentorMatchImg,
       stackSvg: [`${iconBaseUrl}laravel.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mysql.svg`, `${iconBaseUrl}docker.svg`, `${iconBaseUrl}digital-ocean.svg`, `${iconBaseUrl}zoom.svg`]
     },
     {
@@ -45,7 +48,7 @@ export const projectsConfig = {
       },
       href: "https://facultades.unab.cl/ingenieria/carrera/ingenieria-en-computacion-e-informatica/",
       repo: "https://github.com/UNAB-ISW2/lectobot",
-      imageUrl: assetPath('/assets/images/projects/banubot.png'),
+      imageUrl: banubotImg,
       stackSvg: [`${iconBaseUrl}arduino.svg`, `${iconBaseUrl}fastapi.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}docker.svg`, `${iconBaseUrl}bluetooth.svg`]
     },
     {
@@ -59,7 +62,7 @@ export const projectsConfig = {
       },
       href: "https://github.com/Engine-File-Media/front-engine-file-media",
       repo: "https://github.com/Engine-File-Media/front-engine-file-media",
-      imageUrl: assetPath('/assets/images/projects/efm.png'),
+      imageUrl: efmImg,
       stackSvg: [`${iconBaseUrl}nodejs.svg`, `${iconBaseUrl}express.svg`, `${iconBaseUrl}typescript.svg`, `${iconBaseUrl}react.svg`, `${iconBaseUrl}tailwind.svg`, `${iconBaseUrl}mongodb.svg`, `${iconBaseUrl}paypal.svg`, `${iconBaseUrl}lulu.svg`]
 
     }
