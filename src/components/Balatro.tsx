@@ -142,7 +142,7 @@ export default function Balatro({
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
-    const renderer = new Renderer();
+    const renderer = new Renderer({ dpr: Math.min(window.devicePixelRatio, 1.5) });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 1);
 
@@ -183,15 +183,37 @@ export default function Balatro({
     });
 
     const mesh = new Mesh(gl, { geometry, program });
-    let animationFrameId: number;
+    let animationFrameId: number | null = null;
+    let isVisible = false;
+    let isPageVisible = !document.hidden;
+    let lastRenderTime = 0;
+    const frameInterval = 1000 / 60;
 
     function update(time: number) {
+      animationFrameId = null;
+      if (!isVisible || !isPageVisible) return;
+
       animationFrameId = requestAnimationFrame(update);
-      if (!program) return;
+      if (!program || time - lastRenderTime < frameInterval) return;
+
+      lastRenderTime = time;
       program.uniforms.iTime.value = time * 0.001;
       renderer.render({ scene: mesh });
     }
-    animationFrameId = requestAnimationFrame(update);
+
+    const startAnimation = () => {
+      if (!animationFrameId && isVisible && isPageVisible) {
+        animationFrameId = requestAnimationFrame(update);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    };
+
     container.appendChild(gl.canvas);
 
     function handleMouseMove(e: MouseEvent) {
@@ -202,10 +224,30 @@ export default function Balatro({
       if (!program) return;
       program.uniforms.uMouse.value = [x, y];
     }
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry?.isIntersecting ?? false;
+        if (isVisible) startAnimation();
+        else stopAnimation();
+      },
+      { threshold: 0 }
+    );
+    intersectionObserver.observe(container);
+
+    const handleVisibilityChange = () => {
+      isPageVisible = !document.hidden;
+      if (isPageVisible) startAnimation();
+      else stopAnimation();
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    startAnimation();
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      stopAnimation();
+      intersectionObserver.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMouseMove);
       container.removeChild(gl.canvas);
