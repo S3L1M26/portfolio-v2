@@ -1,6 +1,6 @@
-import banubotImg from '../../public/assets/images/projects/banubot.webp';
-import efmImg from '../../public/assets/images/projects/efm.webp';
-import mentorMatchImg from '../../public/assets/images/projects/mentor_match.webp';
+import banubotImg from '../../public/assets/images/projects/banubot-optimized.webp';
+import efmImg from '../../public/assets/images/projects/efm-optimized.webp';
+import mentorMatchImg from '../../public/assets/images/projects/mentor_match-optimized.webp';
 import { assetPath } from '@/lib/assets';
 
 const iconBaseUrl = assetPath('/assets/images/projects/icon/');

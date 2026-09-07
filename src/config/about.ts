@@ -58,6 +58,60 @@ export const aboutConfig = {
       es: "Empatía e Inteligencia Emocional"
     }
   ],
+  currently: {
+    title: {
+      en: "Currently",
+      es: "Actualmente"
+    },
+    building: {
+      label: {
+        en: "Building",
+        es: "Construyendo"
+      },
+      value: {
+        en: "Engine File Media",
+        es: "Engine File Media"
+      },
+      description: {
+        en: "An editorial platform for motorsport documentation.",
+        es: "Una plataforma editorial para documentación de automovilismo."
+      }
+    },
+    learning: {
+      label: {
+        en: "Learning",
+        es: "Aprendiendo"
+      },
+      value: {
+        en: "Next.js · NestJS · TypeScript",
+        es: "Next.js · NestJS · TypeScript"
+      }
+    },
+    lookingFor: {
+      label: {
+        en: "Looking for",
+        es: "Buscando"
+      },
+      value: {
+        en: "Junior Software Developer roles",
+        es: "Oportunidades como desarrollador de software junior"
+      }
+    },
+    links: {
+      linkedin: {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/luis-l%C3%B3pez-8ba07925a/"
+      },
+      github: {
+        label: "GitHub",
+        url: "https://www.github.com/S3L1M26"
+      },
+      email: {
+        label: "Email",
+        url: "mailto:l.narvaezluis26@gmail.com"
+      }
+    }
+  },
   experience: {
     title: {
       en: "Experience",

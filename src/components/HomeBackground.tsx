@@ -28,7 +28,7 @@ export default function HomeBackground() {
       contrast={3.5}
       lighting={0.4}
       spinAmount={0.25}
-      pixelFilter={1450}
+      pixelFilter={2000}
     />
   );
 }
