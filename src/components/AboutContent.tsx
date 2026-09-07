@@ -1,9 +1,9 @@
 'use client';
 
-import Image from "next/image";
 import { aboutConfig } from "@/config/about";
 import { useLanguage } from "@/context/LanguageContext";
 import { assetPath } from "@/lib/assets";
+import TextType from "@/components/TextType";
 
 export default function AboutContent() {
   const { language } = useLanguage();
@@ -28,43 +28,68 @@ export default function AboutContent() {
             </div>
           </div>
 
-          <div className="flex min-w-0 w-full flex-col items-center md:w-1/2 md:items-end md:pt-0">
-            <div className="relative aspect-square w-full max-w-72 sm:max-w-80 md:max-w-76">
-              <Image
-                src={assetPath('/assets/images/about/coder.jpg')}
-                alt="Profile"
-                fill
-                sizes="(max-width: 768px) 100vw, 320px"
-                className="object-cover rounded-xl"
-                priority
-              />
-            </div>
+          <div className="flex min-w-0 w-full flex-col md:w-1/2 md:items-end md:pt-0">
+            <div className="w-full max-w-md overflow-hidden border border-neutral-800 bg-[#0a0a0a] font-mono text-sm text-neutral-300 shadow-xl shadow-black/10">
+              <div className="flex items-center gap-2 border-b border-neutral-800 bg-[#111111] px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" aria-hidden="true" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" aria-hidden="true" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" aria-hidden="true" />
+                <span className="ml-2 text-xs text-neutral-500">currently.sh</span>
+              </div>
 
-            {/* Connect Section */}
-            <div className="mt-3 w-full max-w-72 sm:max-w-80 md:max-w-76">
-              <h2 className="mb-1 text-2xl font-bold dark:text-neutral-200">{aboutConfig.connect.title[language]}</h2>
-              <div className="py-1">
-                <p className="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                  {(() => {
-                    const text = aboutConfig.connect.description[language];
-                    const [beforeLinkedin, afterLinkedin] = text.split('LinkedIn');
-                    const [beforeEmail, afterEmail] = (afterLinkedin ?? '').split('email');
+              <div className="p-6 sm:p-8">
+                <TextType
+                  as="div"
+                  text={`$ cat ~/.${aboutConfig.currently.title.en.toLowerCase()}`}
+                  typingSpeed={45}
+                  initialDelay={250}
+                  deletingText={false}
+                  loop={false}
+                  cursorCharacter="_"
+                  cursorClassName="text-[#39ff88]"
+                  className="min-h-6 text-sm font-semibold text-[#39ff88]"
+                  startOnVisible
+                />
 
-                    return (
-                      <span>
-                        {beforeLinkedin}
-                        <a href={aboutConfig.connect.links.linkedin.url} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">
-                          LinkedIn
-                        </a>
-                        {beforeEmail}
-                        <a href={aboutConfig.connect.links.email.url} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">
-                          email
-                        </a>
-                        {afterEmail}
-                      </span>
-                    );
-                  })()}
-                </p>
+                <div className="mt-8 space-y-7">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] text-neutral-500">
+                    {aboutConfig.currently.building.label[language]}
+                  </p>
+                  <p className="mt-1 text-base font-semibold text-neutral-100">
+                    {aboutConfig.currently.building.value[language]}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-neutral-400">
+                    {aboutConfig.currently.building.description[language]}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] text-neutral-500">
+                    {aboutConfig.currently.learning.label[language]}
+                  </p>
+                  <p className="mt-1 text-sm text-[#39ff88]">
+                    {aboutConfig.currently.learning.value[language]}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] text-neutral-500">
+                    {aboutConfig.currently.lookingFor.label[language]}
+                  </p>
+                  <p className="mt-1 text-sm text-neutral-100">
+                    {aboutConfig.currently.lookingFor.value[language]}
+                  </p>
+                </div>
+                </div>
+
+                <nav className="mt-8 flex flex-wrap gap-x-4 gap-y-2 border-t border-neutral-800 pt-5 text-sm" aria-label="Social links">
+                  {Object.values(aboutConfig.currently.links).map((link) => (
+                    <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-[#39ff88] underline-offset-4 hover:text-white hover:underline">
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
               </div>
             </div>
           </div>
