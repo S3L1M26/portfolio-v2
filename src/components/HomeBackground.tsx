@@ -11,7 +11,7 @@ const backgroundPalettes = {
   },
   dark: {
     color1: '#000000',
-    color2: '#B1B1BC',
+    color2: '#9898a1',
     color3: '#1A1C1C'
   }
 } as const;

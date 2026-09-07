@@ -81,9 +81,9 @@ export default function HomeContent() {
   const { language } = useLanguage();
 
   return (
-    <div className="flex flex-1 items-center -translate-y-5 sm:-translate-y-8 lg:-translate-y-12">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-8 px-4 sm:gap-10 sm:px-6 md:flex-row lg:px-8">
-        <div className="w-full min-w-0 text-left md:w-[45%]">
+    <div className="flex flex-1 items-center justify-center">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+        <div className="w-full min-w-0">
           {/* <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
             {homeConfig.greeting[language]}
           </h1> */}
@@ -91,31 +91,34 @@ export default function HomeContent() {
             speed={0.9}
             enableShadows
             enableOnHover
-            className='text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl'
+            className='text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:text-6xl'
           >
             {homeConfig.greeting[language]}
           </GlitchText>
           {/* <p className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
             {homeConfig.description[language]}
           </p> */}
-          <TextType 
-            key={`description-${language}`}
-            text={homeConfig.description[language]}
-            typingSpeed={30}
-            pauseDuration={1500}
-            showCursor
-            cursorCharacter="█"
-            deletingSpeed={50}
-            variableSpeedEnabled={false}
-            variableSpeedMin={60}
-            variableSpeedMax={120}
-            cursorBlinkDuration={0.5}
-            className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400"
-          />
-          <div className="mt-4 flex flex-wrap gap-3 sm:gap-4">
+          <div className="mt-5 w-full">
+            <TextType
+              key={`description-${language}`}
+              text={homeConfig.description[language]}
+              typingSpeed={30}
+              pauseDuration={1500}
+              deletingText={false}
+              showCursor
+              cursorCharacter="█"
+              deletingSpeed={50}
+              variableSpeedEnabled={false}
+              variableSpeedMin={60}
+              variableSpeedMax={120}
+              cursorBlinkDuration={0.5}
+              className="text-xl leading-8 text-neutral-700 dark:text-neutral-50 sm:text-2xl sm:leading-9"
+            />
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/about"
-              className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="group inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-5 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 cursor-pointer"
             >
               {language === 'en' ? 'View About' : 'Sobre mí'}
               <svg 
@@ -135,7 +138,7 @@ export default function HomeContent() {
 
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-800 transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="group inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-5 py-3 text-base font-medium text-neutral-900 transition-all duration-300 hover:scale-105 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 cursor-pointer"
             >
               {homeConfig.buttons.viewProjects[language]}
               <svg 

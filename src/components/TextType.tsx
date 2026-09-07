@@ -17,6 +17,7 @@ interface TextTypeProps {
   initialDelay?: number;
   pauseDuration?: number;
   deletingSpeed?: number;
+  deletingText?: boolean;
   loop?: boolean;
   className?: string;
   showCursor?: boolean;
@@ -42,6 +43,7 @@ const TextType = ({
   initialDelay = 0,
   pauseDuration = 2000,
   deletingSpeed = 30,
+  deletingText = true,
   loop = true,
   className = '',
   showCursor = true,
@@ -155,6 +157,7 @@ const TextType = ({
             effectiveVariableSpeed ? getRandomSpeed() : typingSpeed
           );
         } else if (textArray.length >= 1) {
+          if (!deletingText) return;
           if (!loop && currentTextIndex === textArray.length - 1) return;
           timeout = setTimeout(() => {
             setIsDeleting(true);
@@ -177,6 +180,7 @@ const TextType = ({
     isDeleting,
     typingSpeed,
     deletingSpeed,
+    deletingText,
     pauseDuration,
     textArray,
     currentTextIndex,
