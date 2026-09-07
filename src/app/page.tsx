@@ -7,17 +7,17 @@ export default function Home() {
   return (
     <main className="relative min-h-screen flex flex-col isolate">
       <div className="relative flex flex-1 flex-col">
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="pointer-events-auto absolute inset-0 z-0 overflow-hidden">
           <Balatro
             spinRotation={-2}
             spinSpeed={7}
-            color1="#DE443B"
-            color2="#006BB4"
-            color3="#162325"
+            color1="#1c1818"
+            color2="#858d93"
+            color3="#1e2223"
             contrast={3.5}
             lighting={0.4}
             spinAmount={0.25}
-            pixelFilter={1050}
+            pixelFilter={1450}
           />
         </div>
 
