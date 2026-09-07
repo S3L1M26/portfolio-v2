@@ -17,6 +17,20 @@ export const globalConfig = {
       },
       {
         title: {
+          en: "About",
+          es: "Sobre mí"
+        },
+        href: "/about"
+      },
+      {
+        title: {
+          en: "Skills",
+          es: "Habilidades"
+        },
+        href: "/skills"
+      },
+      {
+        title: {
           en: "Projects",
           es: "Proyectos"
         },
@@ -29,20 +43,6 @@ export const globalConfig = {
       //   },
       //   href: "/posts"
       // },
-      {
-        title: {
-          en: "Skills",
-          es: "Habilidades"
-        },
-        href: "/skills"
-      },
-      {
-        title: {
-          en: "About",
-          es: "Sobre mí"
-        },
-        href: "/about"
-      }
     ]
   },
   footer: {
