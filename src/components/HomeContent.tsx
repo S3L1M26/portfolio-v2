@@ -5,6 +5,8 @@ import Link from "next/link";
 import { homeConfig } from '@/config/home';
 import { useLanguage }from '@/context/LanguageContext';
 import { assetPath } from '@/lib/assets';
+import GlitchText from './GlitchText';
+import TextType from './TextType';
 
 const LIGHT_BACKGROUND_SVG = assetPath('/assets/images/output.svg');
 const DARK_BACKGROUND_SVG = assetPath('/assets/images/output-dark.svg');
@@ -82,12 +84,34 @@ export default function HomeContent() {
     <div className="flex flex-1 items-center -translate-y-5 sm:-translate-y-8 lg:-translate-y-12">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-8 px-4 sm:gap-10 sm:px-6 md:flex-row lg:px-8">
         <div className="w-full min-w-0 text-left md:w-[45%]">
-          <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          {/* <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
             {homeConfig.greeting[language]}
-          </h1>
-          <p className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
+          </h1> */}
+          <GlitchText
+            speed={0.9}
+            enableShadows
+            enableOnHover
+            className='text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl'
+          >
+            {homeConfig.greeting[language]}
+          </GlitchText>
+          {/* <p className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
             {homeConfig.description[language]}
-          </p>
+          </p> */}
+          <TextType 
+            key={`description-${language}`}
+            text={homeConfig.description[language]}
+            typingSpeed={30}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter="█"
+            deletingSpeed={50}
+            variableSpeedEnabled={false}
+            variableSpeedMin={60}
+            variableSpeedMax={120}
+            cursorBlinkDuration={0.5}
+            className="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400"
+          />
           <div className="mt-4 flex flex-wrap gap-3 sm:gap-4">
             <Link
               href="/about"
