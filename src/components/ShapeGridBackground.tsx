@@ -21,7 +21,7 @@ export default function ShapeGridBackground() {
   const palette = backgroundPalettes[resolvedTheme === 'light' ? 'light' : 'dark'];
 
   return (
-    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div className="fixed inset-0 overflow-hidden" aria-hidden="true">
       <ShapeGrid
         speed={0.5}
         squareSize={40}
