@@ -131,11 +131,11 @@ export default function HomeContent() {
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-center bg-transparent md:w-[45%]">
+        {/* <div className="flex w-full items-center justify-center bg-transparent md:w-[45%]">
           <div className="flex items-center justify-center w-full">
             <ThemeAwareImage />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
