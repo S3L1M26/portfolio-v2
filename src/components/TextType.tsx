@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
 import type { ElementType, ReactNode } from 'react';
 import { gsap } from 'gsap';
-import './TextType.css';
+import '@/styles/TextType.css';
 
 interface VariableSpeed {
   min: number;

@@ -3,7 +3,7 @@
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 import { useEffect, useRef } from 'react';
 
-import './Balatro.css';
+import '@/styles/Balatro.css';
 
 function hexToVec4(hex: string): [number, number, number, number] {
   let hexStr = hex.replace('#', '');
